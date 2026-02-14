@@ -1,0 +1,10 @@
+<suite name = "AskLaila">
+    <test name = "Car Wash Services">
+        <classes>
+            <class name = "Tests.AskLailaTests"/>
+        </classes>
+    </test>
+
+
+
+</suite>
