@@ -102,4 +102,22 @@ public class FitnessCentresTest extends BaseTest {
         File screenshotFile = new File(path);
         Assert.assertTrue(screenshotFile.exists() && screenshotFile.length() > 0);
     }
+
+    @Test(groups = {"functional"}, dependsOnMethods = {"captureFinalResultsScreenshot"})
+    public void navigateToHome()
+    {
+        String excepted_title="AskLaila Chennai - India's local information service.";
+        String actual_title;
+        while (true)
+        {
+            actual_title=driver.getTitle();
+            if(excepted_title.equals(actual_title))
+            {
+                break;
+            }
+            driver.navigate().back();
+        }
+    }
+
+
 }
