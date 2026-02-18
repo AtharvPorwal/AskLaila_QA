@@ -1,4 +1,4 @@
-package base;
+package Base;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -16,19 +16,13 @@ public class BaseTest {
 
 
     //    @Parameters("browser")
-    @BeforeMethod
-    public void setup(String browser){
-        browserName = browser;
-
-        if(browser.equalsIgnoreCase("Chrome")){
-            driver = new ChromeDriver();
-        }
-
-        //driver = new ChromeDriver();
+    @BeforeSuite
+    public void setUp(){
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://www.asklaila.com/");
 
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+       // wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
     }
 
