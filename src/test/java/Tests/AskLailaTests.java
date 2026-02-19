@@ -111,7 +111,7 @@ public class AskLailaTests extends BaseTest {
 
         // 2) Valid email, no password -> site err div + screenshot
         login.clearEmail();
-        login.setEmail("test@gmail.com");
+        // login.setEmail("test@gmail.com");
         login.clickLogin();
         Thread.sleep(3000);
         String err2 = login.getError();
@@ -120,7 +120,7 @@ public class AskLailaTests extends BaseTest {
 
         // 3) Email + invalid password -> site err div + screenshot
         login.clearEmail();
-        //login.setEmail("test@gmail.com");
+        login.setEmail("test@gmail.com");
         login.setPassword("wrongpass");
         login.clickLogin();
         Thread.sleep(3000);
@@ -157,7 +157,7 @@ public class AskLailaTests extends BaseTest {
 
         // Preparation for Excel
         List<String[]> excelData = new ArrayList<>();
-        String excelPath = System.getProperty("user.dir") +"\\AskLaila_QA\\src\\main\\java\\Utils\\Gymdata.xlsx";
+        String excelPath = "src/main/java/Utils/Gymdata.xlsx";
         Gym_ExcelUtils excel = new Gym_ExcelUtils(excelPath);
 
         for (String record : gymDataList) {

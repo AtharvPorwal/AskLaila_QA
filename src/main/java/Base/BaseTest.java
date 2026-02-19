@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class BaseTest {
 
-    protected  WebDriver driver;
+    public WebDriver driver;
     protected  WebDriverWait wait ;
     protected String browserName;
 
@@ -26,9 +26,9 @@ public class BaseTest {
 
     }
 
-    /*@AfterMethod
+    @AfterSuite
     public void tearDown(){
 
         driver.quit();
-    } */
+    }
 }
