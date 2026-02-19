@@ -2,12 +2,9 @@
 
 <suite name = "AskLaila">
 
-
     <listeners>
         <listener class-name="Listeners.ExtentTestNGListener"/>
     </listeners>
-
-
 
     <test name = "Car Wash Services">
         <classes>
@@ -15,9 +12,5 @@
 
         </classes>
     </test>
-
-
-
-
 
 </suite>
