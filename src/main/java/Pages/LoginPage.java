@@ -50,6 +50,7 @@ public class LoginPage {
 
     public void setPassword(String value) {
 
+        email.clear();
         password.clear();
         password.sendKeys(value);
     }
